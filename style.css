@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body{
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weatherbox,
+.weatherbox1
+{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.weatherbox{
+    background-image: url('./images/25501.jpg');
+}
+.weatherbox1{
+    background-image: url('images/nightsky.jpg');
+}
+   
+.weatherDiv{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btndiv{
+    background-color: white;
+    width: 50px;
+    border-radius: 50%;
+}
+.btndiv:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 25px 50px rgba(0, 0,0,0.15);
+}
+.weatherDisplay{
+    padding: 3% 5%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(50px);
+    border: 1px solid rgba(255,255,255, 0.5); 
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    border-left: 1px solid rgba(255,255, 255, 0.25); 
+    border-radius: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 25px 50px rgba(0, 0,0,0.15);
+}
+
+#inputBox{
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: 10px;
+    font-size: larger;
+    border-radius: 50px;
+}
+.displayClass h1{
+   font-size: 90px;
+}
+#cityName{
+    font-size: 50px;
+}
+.displayClass{
+    display: none;
+}
+#cmpName{
+    display: none;
+}
+
+@media only screen and (max-width: 350px){
+    .btndiv{
+        display: none;
+    }
+    #inputBox{
+        padding: 5px;
+        font-size: medium;
+    }
+    .weatherDisplay{
+        padding: 3% 5%;
+    }
+}
